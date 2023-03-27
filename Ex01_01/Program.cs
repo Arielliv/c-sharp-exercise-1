@@ -18,8 +18,7 @@ namespace Ex01_01
             string[] binaryNumbersInput = new string[i_AmountOfNumbers];
             string userInput;
 
-            string userMessage = string.Format("Please enter {0} binary numbers with 8 digits each:",
-                    i_AmountOfNumbers);
+            string userMessage = string.Format("Please enter {0} binary numbers with 8 digits each:", i_AmountOfNumbers);
 
             Console.WriteLine(userMessage);
             for (int i = 0; i < i_AmountOfNumbers; i++)
@@ -243,8 +242,10 @@ namespace Ex01_01
             averageOfZeroDigitAndOneDigitMessage = string.Format(
                 @"The average of 0 digit is {0}
 The average of 1 digit is {1}
-",
-                averageOfZeroDigit, averageOfOneDigit);
+", 
+                averageOfZeroDigit,
+                averageOfOneDigit);
+
             return averageOfZeroDigitAndOneDigitMessage;
         }
 

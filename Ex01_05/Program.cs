@@ -12,6 +12,7 @@ namespace Ex01_05
             entry();
             waitForUserInput();
         }
+
         private static void waitForUserInput()
         {
             Console.WriteLine("Press any key to continue...");
@@ -26,13 +27,19 @@ namespace Ex01_05
             int smallestDigitInNumber = getSmallestDigitInNumber(userInputNumber);
             int amountOfDigitsDivisibleBy3 = getAmountOfDigitsDivisibleBy3(userInput);
             int digitsAvarage = getDigitsAvarage(userInputNumber);
-            string inputAnalysisMessage = string.Format(@"The amount of bigger digits than the unity digit is: {0}.
+            string inputAnalysisMessage = string.Format(
+                @"The amount of bigger digits than the unity digit is: {0}.
 The smallest digit in the number is: {1}.
 The amount of digits divisible by 3 is: {2}.
-The digits avarage is: {3}.", amountOfBiggerDigitsThanUnityDigit, smallestDigitInNumber, amountOfDigitsDivisibleBy3, digitsAvarage);
-            
+The digits avarage is: {3}.",
+amountOfBiggerDigitsThanUnityDigit,
+smallestDigitInNumber,
+amountOfDigitsDivisibleBy3,
+digitsAvarage);
+
             Console.WriteLine(inputAnalysisMessage);
         }
+
         private static string getUserInput()
         {
             Console.Write("Please enter an integer number of 6 digits: ");
@@ -53,6 +60,7 @@ The digits avarage is: {3}.", amountOfBiggerDigitsThanUnityDigit, smallestDigitI
 
             return i_UserInput.Length == k_NumberOfDigits && int.TryParse(i_UserInput, out userInputNumber);
         }
+
         public static int getAmountOfBiggerDigitsThanUnityDigit(string i_Number)
         {
             int amountOfBiggerDigitsThanUnityDigit = 0;

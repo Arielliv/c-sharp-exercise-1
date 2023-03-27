@@ -4,13 +4,14 @@ using System.Text;
 
 namespace Ex01_04
 {
-    class Program
+    public class Program
     {
         public static void Main()
         {
             handleUserInputAnalysis();
             waitForUserInput();
         }
+
         private static void waitForUserInput()
         {
             Console.WriteLine("Press any key to continue...");
@@ -53,14 +54,15 @@ namespace Ex01_04
 
             return userInput;
         }
+
         private static bool isStringContainsNumbersOnly(string i_String)
         {
-            return i_String.All(Char.IsDigit);
+            return i_String.All(char.IsDigit);
         }
 
         private static bool isStringContainsLettersOnly(string i_String)
         {
-            return i_String.All(Char.IsLetter);
+            return i_String.All(char.IsLetter);
         }
 
         private static bool isUserInputValid(string i_UserInput)
@@ -68,6 +70,7 @@ namespace Ex01_04
             return i_UserInput.Length == 6 && 
                 (isStringContainsNumbersOnly(i_UserInput) || isStringContainsLettersOnly(i_UserInput));
         }
+
         private static string numberDivisibleBy3Check(int i_number)
         {
             if (i_number % 3 == 0)
@@ -86,7 +89,7 @@ namespace Ex01_04
 
             for (int i = 0; i < i_Value.Length; i++)
             {
-                if(Char.IsUpper(i_Value[i]))
+                if(char.IsUpper(i_Value[i]))
                 {
                     amountOfUpperCaseLetters++;
                 }
@@ -108,6 +111,7 @@ namespace Ex01_04
                 return "The string is not a palindrome.";
             }
         }
+
         private static bool isStringPalindrome(string i_StringToCheck, int i_startingCharIndex, int i_endingCharIndex)
         {
             bool isPalindrome = true;

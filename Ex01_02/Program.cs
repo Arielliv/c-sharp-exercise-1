@@ -47,8 +47,8 @@ namespace Ex01_02
 
             drawSpaces(i_RowNumber - 1);
 
-            drawAsterisks((i_TotalRowsNumber - i_RowNumber) * 2 + 1);
-            Console.WriteLine("");
+            drawAsterisks(((i_TotalRowsNumber - i_RowNumber) * 2) + 1);
+            Console.WriteLine(string.Empty);
             drawTriangle(i_RowNumber - 1, i_TotalRowsNumber);
         }
 
@@ -60,14 +60,14 @@ namespace Ex01_02
             }
 
             drawSpaces(i_TotalRowsNumber - i_RowNumber + 1);
-            drawAsterisks(i_RowNumber * 2 - 1);
-            Console.WriteLine("");
+            drawAsterisks((i_RowNumber * 2) - 1);
+            Console.WriteLine(string.Empty);
             drawReverseTriangle(i_RowNumber - 1, i_TotalRowsNumber);
         }
 
         public static void DrawDiamond(int i_DiamondSize)
         {
-            int triangleHeight = i_DiamondSize / 2 + 1;
+            int triangleHeight = (i_DiamondSize / 2) + 1;
             int ReverseTrinagle = i_DiamondSize / 2;
 
             drawTriangle(triangleHeight, triangleHeight);

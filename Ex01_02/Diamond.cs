@@ -2,67 +2,72 @@
 
 namespace Ex01_02
 {
-    class Diamond
+    public class Diamond
     {
-        private int m_DiamondSize;
+        private readonly int r_DiamondSize;
 
         public Diamond(int i_DiamondSize)
         {
-            m_DiamondSize = i_DiamondSize;
+            r_DiamondSize = i_DiamondSize;
         }
 
-        private static void spaces(int numberOfSpaces)
+        private static void drawSpaces(int i_NumberOfSpaces)
         {
-            if (numberOfSpaces == 0)
+            if (i_NumberOfSpaces == 0)
             {
                 return;
             }
 
             Console.Write(" ");
-            spaces(numberOfSpaces - 1);
+            drawSpaces(i_NumberOfSpaces - 1);
         }
 
-        private static void asterisks(int numberOfAsterisks)
+        private static void drawAsterisks(int i_NumberOfAsterisks)
         {
-            if (numberOfAsterisks == 0)
+            if (i_NumberOfAsterisks == 0)
             {
                 return;
             }
 
-            Console.Write("* ");
-            asterisks(numberOfAsterisks - 1);
+            Console.Write("*");
+            drawAsterisks(i_NumberOfAsterisks - 1);
         }
 
-        private static void trinagle(int rowNumber, int totalRowsNumber)
+        private static void drawTriangle(int i_RowNumber, int i_TotalRowsNumber)
         {
-            if (rowNumber == 0)
+            if (i_RowNumber == 0)
             {
                 return;
             }
 
-            spaces(rowNumber - 1);
-            asterisks(totalRowsNumber - rowNumber + 1);
+            drawSpaces(i_RowNumber - 1);
+           
+            drawAsterisks((i_TotalRowsNumber - i_RowNumber) *2 + 1);
             Console.WriteLine("");
-            trinagle(rowNumber - 1, totalRowsNumber);
+            drawTriangle(i_RowNumber - 1, i_TotalRowsNumber);
         }
 
-        private static void reverseTrinagle(int rowNumber, int totalRowsNumber)
+        private static void drawReverseTriangle(int i_RowNumber, int i_TotalRowsNumber)
         {
-            if (rowNumber == 0)
+            if (i_RowNumber == 0)
             {
                 return;
             }
 
-            spaces(totalRowsNumber - rowNumber + 1);
-            asterisks(rowNumber - 1);
+            drawSpaces(i_TotalRowsNumber - i_RowNumber + 1);
+            drawAsterisks(i_RowNumber * 2 - 1);
             Console.WriteLine("");
-            reverseTrinagle(rowNumber - 1, totalRowsNumber);
+            drawReverseTriangle(i_RowNumber - 1, i_TotalRowsNumber);
         }
 
         public void Draw()
         {
-            trinagle(m_DiamondSize, m_DiamondSize);
-            reverseTrinagle(m_DiamondSize, m_DiamondSize);
+            int triangleHeight = r_DiamondSize / 2 + 1;
+            int ReverseTrinagle = r_DiamondSize / 2;
+
+            drawTriangle(triangleHeight, triangleHeight);
+            drawReverseTriangle(ReverseTrinagle, ReverseTrinagle);
         }
     }
 }
+

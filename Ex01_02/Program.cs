@@ -1,27 +1,23 @@
 ﻿using System;
-using Ex01_02;
 
-class Program
+namespace Ex01_02
 {
-    static void Main(string[] args)
+    class Program
     {
+        static void Main(string[] args)
+        {
 
-        int size = getUserInput();
-        Diamond userDiamond = new Diamond(size);
-        userDiamond.Draw();
+            Diamond userDiamond = new Diamond(9);
+            userDiamond.Draw();
+            waitForUserInput();
+        }
 
-        Console.WriteLine("Press any key to continue...");
-        Console.ReadKey();
+        private static void waitForUserInput()
+        {
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+        }
     }
-
-    private static int getUserInput()
-    {
-        Console.Write("Enter the size of the diamond: ");
-        int size = int.Parse(Console.ReadLine());
-        return size;
-    }
-
-   
 }
 
         

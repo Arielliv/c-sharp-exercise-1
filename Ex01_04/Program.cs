@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Text;
 
 namespace Ex01_04
 {
@@ -7,28 +8,36 @@ namespace Ex01_04
     {
         public static void Main()
         {
-            handleUserInput();
+            handleUserInputAnalysis();
+            waitForUserInput();
+        }
+        private static void waitForUserInput()
+        {
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
         }
 
-        private static void handleUserInput()
+        private static void handleUserInputAnalysis()
         {
             string userInputAsString;
             int userInputAsInt;
+            StringBuilder inputAnalysis = new StringBuilder();
 
             userInputAsString = getUserInput();
-            palindromeCheck(userInputAsString);
+            inputAnalysis.Append(palindromeCheck(userInputAsString));
+            inputAnalysis.Append(Environment.NewLine);
 
             if (isStringContainsNumbersOnly(userInputAsString))
             {
                 userInputAsInt = int.Parse(userInputAsString);
-                numberDivisibleBy3Check(userInputAsInt);
+                inputAnalysis.Append(numberDivisibleBy3Check(userInputAsInt));
             }
             else
             {
-                amountOfUpperCaseLetters(userInputAsString);
+                inputAnalysis.Append(amountOfUpperCaseLetters(userInputAsString));
             }
+
+            Console.WriteLine(inputAnalysis);
         }
 
         private static string getUserInput()
@@ -59,19 +68,19 @@ namespace Ex01_04
             return i_UserInput.Length == 6 && 
                 (isStringContainsNumbersOnly(i_UserInput) || isStringContainsLettersOnly(i_UserInput));
         }
-        private static void numberDivisibleBy3Check(int i_number)
+        private static string numberDivisibleBy3Check(int i_number)
         {
             if (i_number % 3 == 0)
             {
-                Console.WriteLine("The number is divisible by 3 without remainder");
+                return "The number is divisible by 3 without remainder.";
             } 
             else
             {
-                Console.WriteLine("The number is not divisible by 3 without remainder");
+                return "The number is not divisible by 3 without remainder.";
             } 
         }
 
-        private static void amountOfUpperCaseLetters(string i_Value)
+        private static string amountOfUpperCaseLetters(string i_Value)
         {
             int amountOfUpperCaseLetters = 0;
 
@@ -83,20 +92,20 @@ namespace Ex01_04
                 }
             }
 
-            Console.WriteLine("The number of upper case letters is: {0}", amountOfUpperCaseLetters);
+            return string.Format("The number of upper case letters is: {0}", amountOfUpperCaseLetters);
         }
 
-        private static void palindromeCheck(string i_StringToCheck)
+        private static string palindromeCheck(string i_StringToCheck)
         {
             bool isPalindrome = isStringPalindrome(i_StringToCheck, 0, i_StringToCheck.Length - 1);
 
             if(isPalindrome)
             {
-                Console.WriteLine("The string is a palindrome");
+                return "The string is a palindrome.";
             }
             else
             {
-                Console.WriteLine("The string is not a palindrome");
+                return "The string is not a palindrome.";
             }
         }
         private static bool isStringPalindrome(string i_StringToCheck, int i_startingCharIndex, int i_endingCharIndex)

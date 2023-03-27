@@ -1,17 +1,20 @@
 ﻿using System;
-using Ex01_02;
 
 namespace Ex01_03
 {
-    class Program
+    public class Program
     {
         public static void Main()
         {
-            int diamondSize = getUserInput();
-            Diamond userDiamond = new Diamond(diamondSize);
-
-            userDiamond.Draw();
+            getDiamondSizeAndDraw();
             waitForUserInput();
+        }
+
+        private static void getDiamondSizeAndDraw()
+        {
+            int diamondSize = getUserInput();
+
+            Ex01_02.Program.DrawDiamond(diamondSize);
         }
 
         private static int getUserInput()

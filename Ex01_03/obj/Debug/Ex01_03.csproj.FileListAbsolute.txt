@@ -9,3 +9,14 @@ C:\Users\Administrator\source\repos\B23 Ex01 Ariel 315363366 Adi 206820045\Ex01_
 C:\Users\Administrator\source\repos\B23 Ex01 Ariel 315363366 Adi 206820045\Ex01_03\bin\Debug\Ex01_02.pdb
 C:\Users\Administrator\source\repos\B23 Ex01 Ariel 315363366 Adi 206820045\Ex01_03\bin\Debug\Ex01_02.exe.config
 C:\Users\Administrator\source\repos\B23 Ex01 Ariel 315363366 Adi 206820045\Ex01_03\obj\Debug\Ex01_03.csproj.CopyComplete
+C:\Users\adi.veiszman\Source\Repos\c-sharp-exercise-1\Ex01_03\bin\Debug\Ex01_03.exe.config
+C:\Users\adi.veiszman\Source\Repos\c-sharp-exercise-1\Ex01_03\bin\Debug\Ex01_03.exe
+C:\Users\adi.veiszman\Source\Repos\c-sharp-exercise-1\Ex01_03\bin\Debug\Ex01_03.pdb
+C:\Users\adi.veiszman\Source\Repos\c-sharp-exercise-1\Ex01_03\bin\Debug\Ex01_02.exe
+C:\Users\adi.veiszman\Source\Repos\c-sharp-exercise-1\Ex01_03\bin\Debug\Ex01_02.pdb
+C:\Users\adi.veiszman\Source\Repos\c-sharp-exercise-1\Ex01_03\bin\Debug\Ex01_02.exe.config
+C:\Users\adi.veiszman\Source\Repos\c-sharp-exercise-1\Ex01_03\obj\Debug\Ex01_03.csproj.AssemblyReference.cache
+C:\Users\adi.veiszman\Source\Repos\c-sharp-exercise-1\Ex01_03\obj\Debug\Ex01_03.csproj.CoreCompileInputs.cache
+C:\Users\adi.veiszman\Source\Repos\c-sharp-exercise-1\Ex01_03\obj\Debug\Ex01_03.csproj.CopyComplete
+C:\Users\adi.veiszman\Source\Repos\c-sharp-exercise-1\Ex01_03\obj\Debug\Ex01_03.exe
+C:\Users\adi.veiszman\Source\Repos\c-sharp-exercise-1\Ex01_03\obj\Debug\Ex01_03.pdb

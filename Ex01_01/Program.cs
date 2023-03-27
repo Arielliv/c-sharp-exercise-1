@@ -9,6 +9,12 @@ namespace Ex01_01
             UserInput userInput = new UserInput(3);
             userInput.GetUserInput();
             userInput.UserInputNumbersStatistics();
+            
+            waitForUserInput();
+        }
+
+        private static void waitForUserInput()
+        {
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
         }

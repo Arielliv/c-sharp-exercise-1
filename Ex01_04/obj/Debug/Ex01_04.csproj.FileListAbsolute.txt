@@ -1,0 +1,7 @@
+C:\Users\adi.veiszman\Source\Repos\c-sharp-exercise-1\Ex01_04\obj\Debug\Ex01_04.csproj.AssemblyReference.cache
+C:\Users\adi.veiszman\Source\Repos\c-sharp-exercise-1\Ex01_04\obj\Debug\Ex01_04.csproj.CoreCompileInputs.cache
+C:\Users\adi.veiszman\Source\Repos\c-sharp-exercise-1\Ex01_04\bin\Debug\Ex01_04.exe.config
+C:\Users\adi.veiszman\Source\Repos\c-sharp-exercise-1\Ex01_04\bin\Debug\Ex01_04.exe
+C:\Users\adi.veiszman\Source\Repos\c-sharp-exercise-1\Ex01_04\bin\Debug\Ex01_04.pdb
+C:\Users\adi.veiszman\Source\Repos\c-sharp-exercise-1\Ex01_04\obj\Debug\Ex01_04.exe
+C:\Users\adi.veiszman\Source\Repos\c-sharp-exercise-1\Ex01_04\obj\Debug\Ex01_04.pdb

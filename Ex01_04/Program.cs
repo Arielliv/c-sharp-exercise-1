@@ -74,6 +74,7 @@ namespace Ex01_04
         private static void amountOfUpperCaseLetters(string i_Value)
         {
             int amountOfUpperCaseLetters = 0;
+            string messageToUser;
 
             for (int i = 0; i < i_Value.Length; i++)
             {
@@ -83,7 +84,8 @@ namespace Ex01_04
                 }
             }
 
-            Console.WriteLine("The number of upper case letters is: {0}", amountOfUpperCaseLetters);
+            messageToUser = string.Format("The number of upper case letters is: {0}", amountOfUpperCaseLetters);
+            Console.WriteLine(messageToUser);
         }
 
         private static void palindromeCheck(string i_StringToCheck)

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Ex01_01
 {
@@ -16,6 +17,7 @@ namespace Ex01_01
         {
             string[] binaryNumbersInput = new string[i_AmountOfNumbers];
             string userInput;
+
             string userMessage = string.Format("Please enter {0} binary numbers with 8 digits each:",
                     i_AmountOfNumbers);
 
@@ -38,14 +40,16 @@ namespace Ex01_01
         private static void showUserInputNumbersStatistics(int i_AmountOfNumbers, string[] i_BinaryNumbersInput)
         {
             int[] decimalNumbersInput = getDecimalNumbersInput(i_BinaryNumbersInput);
+            StringBuilder inputAnalysis = new StringBuilder();
 
             Array.Sort(decimalNumbersInput);
             Array.Reverse(decimalNumbersInput);
-            decimalInputNumbers(decimalNumbersInput);
-            averageOfZeroAndOneDigits(i_BinaryNumbersInput);
-            amountOfNumbersDividedBy4(decimalNumbersInput);
-            amountOfDescendingNumbers(decimalNumbersInput);
-            amountOfPalindromeNumbers(decimalNumbersInput);
+            inputAnalysis.Append(getDecimalInputNumbersInDescendingOrder(decimalNumbersInput));
+            inputAnalysis.Append(getAverageOfZeroAndOneDigits(i_BinaryNumbersInput));
+            inputAnalysis.Append(getAmountOfNumbersDivisibleBy4(decimalNumbersInput));
+            inputAnalysis.Append(getAmountOfDescendingNumbers(decimalNumbersInput));
+            inputAnalysis.Append(getAmountOfPalindromeNumbers(decimalNumbersInput));
+            Console.WriteLine(inputAnalysis);
         }
 
         private static bool validateUserInput(string i_BinaryNumber)
@@ -160,70 +164,73 @@ namespace Ex01_01
             return isNumberDigitsDescendingSeries;
         }
 
-        private static void amountOfPalindromeNumbers(int[] i_decimalNumbersInput)
+        private static string getAmountOfPalindromeNumbers(int[] i_decimalNumbersInput)
         {
-            int totalAmountOfPalindromeNumbers = 0;
-            string message;
+            int amountOfPalindromeNumbers = 0;
+            string amountOfPalindromeNumbersMessage;
 
             for (int i = 0; i < i_decimalNumbersInput.Length; i++)
             {
                 if (isNumberDigitsPalindrome(i_decimalNumbersInput[i]))
                 {
-                    totalAmountOfPalindromeNumbers++;
+                    amountOfPalindromeNumbers++;
                 }
             }
 
-            message = string.Format(
-                "The amount of numbers that their digits are palindrome are: {0}",
-                totalAmountOfPalindromeNumbers);
-            Console.WriteLine(message);
+            amountOfPalindromeNumbersMessage = string.Format(
+                @"The amount of numbers that their digits are palindrome are: {0}
+",
+                amountOfPalindromeNumbers);
+            return amountOfPalindromeNumbersMessage;
         }
 
-        private static void amountOfDescendingNumbers(int[] i_decimalNumbersInput)
+        private static string getAmountOfDescendingNumbers(int[] i_decimalNumbersInput)
         {
-            int totalAmountOfNumbersWithDescendingDigitsSeries = 0;
-            string message;
+            int amountOfNumbersWithDescendingDigitsSeries = 0;
+            string amountOfNumbersWithDescendingDigitsSeriesMessage;
 
             for (int i = 0; i < i_decimalNumbersInput.Length; i++)
             {
                 if (isNumberDigitsDescendingSeries(i_decimalNumbersInput[i]))
                 {
-                    totalAmountOfNumbersWithDescendingDigitsSeries++;
+                    amountOfNumbersWithDescendingDigitsSeries++;
                 }
             }
 
-            message = string.Format(
-                "The amount of numbers that their digits are descending series: {0}",
-                totalAmountOfNumbersWithDescendingDigitsSeries);
-            Console.WriteLine(message);
+            amountOfNumbersWithDescendingDigitsSeriesMessage = string.Format(
+                @"The amount of numbers that their digits are descending series: {0}
+",
+                amountOfNumbersWithDescendingDigitsSeries);
+            return amountOfNumbersWithDescendingDigitsSeriesMessage;
         }
 
-        private static void amountOfNumbersDividedBy4(int[] i_decimalNumbersInput)
+        private static string getAmountOfNumbersDivisibleBy4(int[] i_decimalNumbersInput)
         {
-            int totalAmountOfNumbersDividedBy4 = 0;
-            string message;
+            int amountOfNumbersDivisibleBy4 = 0;
+            string amountOfNumbersDivisibleBy4Message;
 
             for (int i = 0; i < i_decimalNumbersInput.Length; i++)
             {
                 if (isNumberDivideByNumber(i_decimalNumbersInput[i], 4))
                 {
-                    totalAmountOfNumbersDividedBy4++;
+                    amountOfNumbersDivisibleBy4++;
                 }
             }
 
-            message = string.Format(
-                "The amount of numbers that are divided by 4 are: {0}",
-                totalAmountOfNumbersDividedBy4);
-            Console.WriteLine(message);
+            amountOfNumbersDivisibleBy4Message = string.Format(
+                @"The amount of numbers that are divided by 4 are: {0}
+",
+                amountOfNumbersDivisibleBy4);
+            return amountOfNumbersDivisibleBy4Message;
         }
 
-        private static void averageOfZeroAndOneDigits(string[] i_BinaryNumbersInput)
+        private static string getAverageOfZeroAndOneDigits(string[] i_BinaryNumbersInput)
         {
             int totalAmountOfZeroDigit = 0;
             int totalAmountOfOneDigit = 0;
             double averageOfZeroDigit = 0;
             double averageOfOneDigit = 0;
-            string message;
+            string averageOfZeroDigitAndOneDigitMessage;
 
             for (int i = 0; i < i_BinaryNumbersInput.Length; i++)
             {
@@ -233,24 +240,26 @@ namespace Ex01_01
 
             averageOfZeroDigit = totalAmountOfZeroDigit / i_BinaryNumbersInput.Length;
             averageOfOneDigit = totalAmountOfOneDigit / i_BinaryNumbersInput.Length;
-            message = string.Format(
+            averageOfZeroDigitAndOneDigitMessage = string.Format(
                 @"The average of 0 digit is {0}
-The average of 1 digit is {1}",
+The average of 1 digit is {1}
+",
                 averageOfZeroDigit, averageOfOneDigit);
-            Console.WriteLine(message);
+            return averageOfZeroDigitAndOneDigitMessage;
         }
 
-        private static void decimalInputNumbers(int[] i_decimalNumbersInput)
+        private static string getDecimalInputNumbersInDescendingOrder(int[] i_decimalNumbersInput)
         {
-            Console.Write("The decimal numbers in descending order:");
+            StringBuilder numbersInDescendingOrder = new StringBuilder();
+
+            numbersInDescendingOrder.Append("The decimal numbers in descending order:");
             foreach (int decimalNumber in i_decimalNumbersInput)
             {
-                Console.Write(" " + decimalNumber);
+                numbersInDescendingOrder.Append(string.Format(" {0}", decimalNumber));
             }
 
-            Console.WriteLine();
+            return numbersInDescendingOrder.Append(Environment.NewLine).ToString();
         }
-
 
         private static void waitForUserInput()
         {

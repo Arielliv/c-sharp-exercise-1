@@ -1,10 +1,3 @@
-C:\Users\Administrator\source\repos\B23 Ex01 Ariel 315363366 Adi 206820045\Ex01_02\bin\Debug\Ex01_02.exe.config
-C:\Users\Administrator\source\repos\B23 Ex01 Ariel 315363366 Adi 206820045\Ex01_02\bin\Debug\Ex01_02.exe
-C:\Users\Administrator\source\repos\B23 Ex01 Ariel 315363366 Adi 206820045\Ex01_02\bin\Debug\Ex01_02.pdb
-C:\Users\Administrator\source\repos\B23 Ex01 Ariel 315363366 Adi 206820045\Ex01_02\obj\Debug\Ex01_02.csproj.CoreCompileInputs.cache
-C:\Users\Administrator\source\repos\B23 Ex01 Ariel 315363366 Adi 206820045\Ex01_02\obj\Debug\Ex01_02.exe
-C:\Users\Administrator\source\repos\B23 Ex01 Ariel 315363366 Adi 206820045\Ex01_02\obj\Debug\Ex01_02.pdb
-<<<<<<< HEAD
 C:\Users\adi.veiszman\Source\Repos\c-sharp-exercise-1\Ex01_02\bin\Debug\Ex01_02.exe.config
 C:\Users\adi.veiszman\Source\Repos\c-sharp-exercise-1\Ex01_02\bin\Debug\Ex01_02.exe
 C:\Users\adi.veiszman\Source\Repos\c-sharp-exercise-1\Ex01_02\bin\Debug\Ex01_02.pdb
@@ -12,6 +5,3 @@ C:\Users\adi.veiszman\Source\Repos\c-sharp-exercise-1\Ex01_02\obj\Debug\Ex01_02.
 C:\Users\adi.veiszman\Source\Repos\c-sharp-exercise-1\Ex01_02\obj\Debug\Ex01_02.csproj.CoreCompileInputs.cache
 C:\Users\adi.veiszman\Source\Repos\c-sharp-exercise-1\Ex01_02\obj\Debug\Ex01_02.exe
 C:\Users\adi.veiszman\Source\Repos\c-sharp-exercise-1\Ex01_02\obj\Debug\Ex01_02.pdb
-=======
-C:\Users\Administrator\source\repos\B23 Ex01 Ariel 315363366 Adi 206820045\Ex01_02\obj\Debug\Ex01_02.csproj.AssemblyReference.cache
->>>>>>> 1c93e268e0bd30132c845c6a6a63494d74f6c6ef

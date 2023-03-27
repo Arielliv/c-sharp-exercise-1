@@ -28,7 +28,7 @@ namespace Ex01_03
 
             while (!isValidSizeInput)
             {
-                if (int.TryParse(userInputSize, out diamondSize))
+                if (int.TryParse(userInputSize, out diamondSize) && diamondSize > 0)
                 {
                     isValidSizeInput = true;
                 }

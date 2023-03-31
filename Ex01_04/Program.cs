@@ -27,7 +27,6 @@ namespace Ex01_04
             userInputAsString = getUserInput();
             inputAnalysis.Append(palindromeCheck(userInputAsString));
             inputAnalysis.Append(Environment.NewLine);
-
             if (isStringContainsNumbersOnly(userInputAsString))
             {
                 userInputAsInt = int.Parse(userInputAsString);
@@ -71,16 +70,20 @@ namespace Ex01_04
                 (isStringContainsNumbersOnly(i_UserInput) || isStringContainsLettersOnly(i_UserInput));
         }
 
-        private static string numberDivisibleBy3Check(int i_number)
+        private static string numberDivisibleBy3Check(int i_Number)
         {
-            if (i_number % 3 == 0)
+            string divisibleBy3Message;
+
+            if (i_Number % 3 == 0)
             {
-                return "The number is divisible by 3 without remainder.";
+                divisibleBy3Message = "The number is divisible by 3 without remainder.";
             } 
             else
             {
-                return "The number is not divisible by 3 without remainder.";
-            } 
+                divisibleBy3Message = "The number is not divisible by 3 without remainder.";
+            }
+
+            return divisibleBy3Message;
         }
 
         private static string amountOfUpperCaseLetters(string i_Value)
@@ -101,33 +104,36 @@ namespace Ex01_04
         private static string palindromeCheck(string i_StringToCheck)
         {
             bool isPalindrome = isStringPalindrome(i_StringToCheck, 0, i_StringToCheck.Length - 1);
+            string isPalindromMessage;
 
             if(isPalindrome)
             {
-                return "The string is a palindrome.";
+                isPalindromMessage = "The string is a palindrome.";
             }
             else
             {
-                return "The string is not a palindrome.";
+                isPalindromMessage = "The string is not a palindrome.";
             }
+
+            return isPalindromMessage;
         }
 
-        private static bool isStringPalindrome(string i_StringToCheck, int i_startingCharIndex, int i_endingCharIndex)
+        private static bool isStringPalindrome(string i_StringToCheck, int i_StartingCharIndex, int i_EndingCharIndex)
         {
             bool isPalindrome = true;
 
-            if(i_startingCharIndex == i_endingCharIndex || i_endingCharIndex < i_startingCharIndex)
+            if(i_StartingCharIndex == i_EndingCharIndex || i_EndingCharIndex < i_StartingCharIndex)
             {
                 return isPalindrome;
             }
    
-            if(i_StringToCheck[i_startingCharIndex] != i_StringToCheck[i_endingCharIndex])
+            if(i_StringToCheck[i_StartingCharIndex] != i_StringToCheck[i_EndingCharIndex])
             {
                 isPalindrome = false;
             }
             else
             {
-                isPalindrome = isStringPalindrome(i_StringToCheck, i_startingCharIndex + 1, i_endingCharIndex - 1);
+                isPalindrome = isStringPalindrome(i_StringToCheck, i_StartingCharIndex + 1, i_EndingCharIndex - 1);
             }
 
             return isPalindrome;

@@ -25,7 +25,6 @@ namespace Ex01_03
 
             Console.Write("Enter the size of the diamond: ");
             userInputSize = Console.ReadLine();
-
             while (!isValidSizeInput)
             {
                 if (int.TryParse(userInputSize, out diamondSize) && diamondSize > 0)

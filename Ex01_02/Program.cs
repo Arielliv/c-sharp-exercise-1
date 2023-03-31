@@ -46,7 +46,6 @@ namespace Ex01_02
             }
 
             drawSpaces(i_RowNumber - 1);
-
             drawAsterisks(((i_TotalRowsNumber - i_RowNumber) * 2) + 1);
             Console.WriteLine(string.Empty);
             drawTriangle(i_RowNumber - 1, i_TotalRowsNumber);

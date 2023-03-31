@@ -58,7 +58,8 @@ digitsAvarage);
         {
             int userInputNumber;
 
-            return i_UserInput.Length == k_NumberOfDigits && int.TryParse(i_UserInput, out userInputNumber);
+            return i_UserInput.Length == k_NumberOfDigits 
+                && int.TryParse(i_UserInput, out userInputNumber);
         }
 
         public static int getAmountOfBiggerDigitsThanUnityDigit(string i_Number)
